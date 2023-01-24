@@ -17,10 +17,10 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 const raisedToTheThird = (arr) => {
   // Solution code here...
 
-  let numArr [];
+  let numArr = [];
 
   for (let num of arr) {
-    numArr.push(Math.pow(3, arr));
+    numArr.push(Math.pow(num, 3));
   }
 
   return numArr;
@@ -34,10 +34,10 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 
 const addOne = (arr) => {
   // Solution code here...
-  let numArr = [];
-  numArr.map(arr => {
-    return numArr +1;
-  })
+  return arr.map(numArr => `${numArr}+1`);
+  // numArr.map(arr => {
+  //   return numArr + 1;
+  // });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,9 +48,7 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 
 const addQuestion = (arr) => {
   // Solution code here...
- arr.map(numStr => {
-  return numStr + '?'
- })
+  return arr.map(newArr => `${newArr}?`);
 
 };
 
