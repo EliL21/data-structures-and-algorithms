@@ -120,6 +120,7 @@ const characters = [
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
+
   arr.forEach(person => {
     houses.push(person.house);
   });
@@ -137,9 +138,6 @@ For example:
 hasChildrenValues(characters, 'Cersei') will return true
 hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
-
-const hasChildrenValues = (arr, character) => {
-  // Solution code here...
   const hasChildrenValues = (arr, character) => {
     let children = true;
     arr.forEach((person) => {
