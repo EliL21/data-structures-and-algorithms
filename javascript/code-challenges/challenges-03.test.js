@@ -52,7 +52,7 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
-  return arr.filter(element => typeof(element)==='and');
+  return arr.filter(element => element.includes('and'));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,6 +65,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
+  return arr.filter(oddNum => oddNum % 2 === 1);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,8 +76,11 @@ Write a function named notInFirstArray that, given two arrays as input, uses fil
 For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
-const notInFirstArray = (forbiddenValues, arr) => {
+const notInFirstArray = (forbiddenValues, arr) =>{
   // Solution code here...
+
+  return arr.filter(Number => !forbiddenValues.includes(Number));
+
 };
 
 /* ------------------------------------------------------------------------------------------------
