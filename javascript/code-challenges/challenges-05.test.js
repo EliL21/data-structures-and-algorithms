@@ -13,7 +13,7 @@ You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
   // Solution code here...
-  let newArr = people
+  return people.map(people =>`${people.firstName} ${people.lastName}`);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -25,6 +25,7 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
+  return arr.reduce((total, number) => total+number, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -41,6 +42,7 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
+  return arr.reduce((total, price) => price.purchasePrice+total, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -53,6 +55,7 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
+  return arr.reduce((total, element) => total+1, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -113,8 +116,8 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+  return arr.reduce((total, char) => total(char.name), []);
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
