@@ -10,6 +10,9 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   // Solution code here...
+  return arr.reduce((accumulator, currentVal)=>{
+    return currentVal > accumulator ? currentVal : accumulator;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -117,6 +120,10 @@ const characters = [
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
+
+  arr.forEach(person => {
+    houses.push(person.house);
+  });
   return houses;
 };
 
@@ -131,11 +138,17 @@ For example:
 hasChildrenValues(characters, 'Cersei') will return true
 hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
-
-const hasChildrenValues = (arr, character) => {
-  // Solution code here...
-
-};
+  const hasChildrenValues = (arr, character) => {
+    let children = true;
+    arr.forEach((person) => {
+      if (person.name === character) {
+        if (!person.children) {
+          children = false;
+        }
+      }
+    });
+    return children;
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
