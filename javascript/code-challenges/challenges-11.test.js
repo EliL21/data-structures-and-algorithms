@@ -151,6 +151,7 @@ let findShortest = (data) => {
   return data.reduce((shortestSoFar, nectCharacter) => +shortestSoFar.height < +nectCharacter.height ? shortestSoFar : nectCharacter).name;
 };
 
+
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
