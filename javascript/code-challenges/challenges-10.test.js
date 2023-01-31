@@ -45,7 +45,6 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
-
 };
 
 
@@ -73,18 +72,14 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
-  let salesArr = [];
   for (let i = 0; i < hoursOpen.length; i++) {
     let hourlyTotal = 0;
-    for (let j = 0; j < stores.length; j++) {
+    for(let j = 0; < stores.length; j++) {
       hourlyTotal += stores[j][i];
     }
-    salesArr.push(hourlyTotal);
+    grandSales.push(hourlyTotal);
   }
-
-
-
-  return salesArr;
+  return grandSales;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -99,15 +94,6 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
-  let organizedData = [];
-  hours.forEach((hour, idx) => {
-    organizedData.push({
-      sale: `${data[idx]} cookies`,
-      time: hours,
-    });
-  });
-
-  return organizedData;
 };
 
 /* ------------------------------------------------------------------------------------------------
