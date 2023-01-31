@@ -14,7 +14,6 @@ You can assume that neither firstName nor lastName will be blank
 const toLastNames = people => {
   // Solution code here...
   return people.map(people =>`${people.firstName} ${people.lastName}`);
-};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -116,8 +115,8 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
-  return arr.reduce((total, char) => total(char.name), []);
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -128,6 +127,7 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  return str.split('').reduce((newStr, char, idx) => char + newStr, (''));
 };
 
 /* ------------------------------------------------------------------------------------------------
