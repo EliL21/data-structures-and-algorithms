@@ -20,6 +20,7 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
+  return Object.entries(obj).map(keyValuePair => `<li>${keyValuePair.join(': ')}</li>`);
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,6 +35,8 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
+  let matchArray =  input.flat().filter(number => number === target);
+  return matchArray.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,6 +51,7 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
+  return input.flat().reduce((runningTotal, currentValue) => runningTotal + currentValue, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,6 +68,9 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+  return input.map(nestedArr => {
+    return nestedArr.filter(number => number % 5 === 0 && typeof number ==='number').map(filteredNumber => Math.pow(2, filteredNumber));
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -130,6 +137,7 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  return data.filter(personObj => personObj.gender.includes('male')).map(person => person.name).join(' and ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -140,7 +148,9 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 
 let findShortest = (data) => {
   // Solution code here...
+  return data.reduce((shortestSoFar, nectCharacter) => +shortestSoFar.height < +nectCharacter.height ? shortestSoFar : nectCharacter).name;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
