@@ -22,3 +22,4 @@
 ### Transversal means walking around
 
 [WhiteBoad](../linked-list/linkedList.png)
+[linkedList](../linked-list/append.png)
